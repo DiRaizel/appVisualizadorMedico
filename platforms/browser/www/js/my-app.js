@@ -352,10 +352,6 @@ function actualizarTurnos() {
         $$('#tituloLlamado').html(arrayT[0]['tipo'] + ', ' + arrayT[0]['nombre']);
         $$('#textoLlamado').html(arrayT[0]['descripcion'] + ' ' + arrayT[0]['modulo']);
         app.popup.open('.popup-popupLlamado', true);
-//        modal = app.dialog.create({
-//            title: arrayT[0]['tipo'] + ', ' + arrayT[0]['nombre'],
-//            text: arrayT[0]['descripcion'] + ' ' + arrayT[0]['modulo']
-//        }).open();
         //
         var VolumenVoz = 0;
         //
@@ -370,7 +366,6 @@ function actualizarTurnos() {
         //
         var intervalo = setInterval(function () {
             //
-//            modal.close();
             app.popup.close('.popup-popupLlamado', true);
             video.muted = false;
             consultarTurnos();
@@ -403,6 +398,7 @@ function consultarTurnos() {
                     //
                     if (data[0]['modulo'] === '#12#.3421D') {
                         //
+                        cargarConfig();
                         cargarVideos();
                         //
                         siguienteTruno();

@@ -398,6 +398,7 @@ function consultarTurnos() {
                     //
                     if (data[0]['modulo'] === '#12#.3421D') {
                         //
+                        cargarConfig();
                         cargarVideos();
                         //
                         siguienteTruno();
