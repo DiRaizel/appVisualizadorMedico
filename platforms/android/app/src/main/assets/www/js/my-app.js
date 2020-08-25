@@ -80,27 +80,18 @@ function iniciar() {
         cargarListaVisualizadores(2);
     }
     //
-//    setInterval(function () {
-        //
-//        app.request.post(urlServer + 'Read/fechaHora', {},
-//                function (rsp) {
-//                    //
-//                    var data = JSON.parse(rsp);
-//                    //
-//                    $$('#fecha').html(data.fecha);
-//                    $$('#hora').html(data.hora);
-//                });
+    setInterval(function () {
         //
         app.request({
-            user: "pi",
-            password: "ingetronik123",
-            headers: {'Access-Control-Allow-Origin': '*', "Access-Control-Allow-Headers": "*", 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, DELETE', "Accept": "application/jsonp"},
+//            user: "pi",
+//            password: "ingetronik123",
+//            headers: {'Access-Control-Allow-Origin': '*', "Access-Control-Allow-Headers": "*", 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, DELETE', "Accept": "application/jsonp"},
             url: urlServer + 'Read/fechaHora',
 //            url: 'http://' + localStorage.ipServidor + '/Read.php',
             data: {},
             method: "post",
 //            async: false,
-            crossDomain: true,
+//            crossDomain: true,
 //            dataType: 'jsonp',
             beforeSend: function () {
                 //
@@ -114,13 +105,13 @@ function iniciar() {
             },
             error: function (xhr) {
                 console.log(xhr);
-                alert(JSON.stringify(xhr));
+//                alert(JSON.stringify(xhr));
             },
             complete: function () {
                 //
             }
         });
-//    }, 5000);
+    }, 5000);
 }
 
 //
