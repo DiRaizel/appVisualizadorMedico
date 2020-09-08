@@ -217,6 +217,7 @@ function cargarVideos() {
                     }
                 } else {
                     //
+                    arrayV = [];
                     actualizarVideos();
                 }
             });
