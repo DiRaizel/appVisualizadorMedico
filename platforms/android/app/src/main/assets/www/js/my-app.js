@@ -215,8 +215,9 @@ function cargarVideos() {
                         //
                         actualizarVideos();
                     }
-                }else{
+                } else {
                     //
+                    arrayV = [];
                     actualizarVideos();
                 }
             });
